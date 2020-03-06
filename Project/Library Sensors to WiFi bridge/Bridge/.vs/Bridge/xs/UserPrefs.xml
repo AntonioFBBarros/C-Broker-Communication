@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{E5319EFD-E0B9-4217-81D8-0EDA48F5472F}|Default">
+  <MonoDevelop.Ide.ItemProperties.Bridge PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bridge/FileManager.cs">
+    <Files>
+      <File FileName="Bridge/Bridge.cs" Line="29" Column="44" />
+      <File FileName="Bridge/FileManager.cs" Line="52" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bridge" expanded="True">
+            <Node name="Bridge" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="FileManager.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ISProj_DB.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="connectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Server=e75ce51d-ce6c-4db9-a147-ab2500bab169.sqlserver.sequelizer.com;Database=dbe75ce51dce6c4db9a147ab2500bab169;User ID=urgfinzveakvypad;Password=6fgqS2gB6cJuLa7exy4xyYqvCJQ6m6jQGXRqUxQ4JUpr5HnkctAHQJSgXSVijip8;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Server=e75ce51d-ce6c-4db9-a147-ab2500bab169.sqlserver.sequelizer.com;Database=dbe75ce51dce6c4db9a147ab2500bab169;User ID=urgfinzveakvypad;Password=6fgqS2gB6cJuLa7exy4xyYqvCJQ6m6jQGXRqUxQ4JUpr5HnkctAHQJSgXSVijip8;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,14 @@
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.exe.config
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.exe
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.pdb
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.csprojAssemblyReference.cache
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Form1.resources
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.csproj.GenerateResource.cache
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.exe
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.pdb
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\M2Mqtt.Net.dll
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.csproj.CopyComplete
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Form3.resources

@@ -1,0 +1,8 @@
+<reading>
+  <id>1</id>
+  <temperature>22.65</temperature>
+  <humidity>47.17</humidity>
+  <battery>100</battery>
+  <timestamp>11/28/2019 11:25:07 AM</timestamp>
+  <alarms>A Temperatura  tem de ser menor que  5</alarms>
+</reading>

@@ -1,0 +1,27 @@
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.exe.config
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.exe
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.pdb
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\M2Mqtt.Net.dll
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\Alerts.csprojAssemblyReference.cache
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Form1.resources
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Form3.resources
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\Alerts.csproj.GenerateResource.cache
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\Alerts.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\Alerts.csproj.CopyComplete
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.exe
+C:\Users\Ricardo\Desktop\IS\Proj\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.pdb
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.exe.config
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.exe
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\bin\Debug\projIs_Alerts.pdb
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\bin\Debug\M2Mqtt.Net.dll
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\Alerts.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Form1.resources
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Form3.resources
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.Properties.Resources.resources
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\Alerts.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\Alerts.csproj.CopyComplete
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.exe
+C:\Users\Admin\Desktop\Projeto_IS\Project\Alerts Micro Application\projIs\projIs_Alerts\obj\Debug\projIs_Alerts.pdb

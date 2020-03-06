@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>Obter token de acesso</h1>
+        Obtém um token de acesso para que possamos aceder aos recursos protegidos da API, para obtermos este token temos que estar registados na aplicação
+        <h3>URL</h3>
+        /api/token
+        <h3>Informação</h3>
+        Não necessita autenticação
+        <h3>Método</h3>
+        POST
+        <h3>Parâmetros URL</h3>
+        None
+        <h3>Parâmetros Body</h3>
+        <p>Content-Type: application/x-www-form-urlencoded</p>
+        <p>username=[string]&password=[string]&grant_type=password</p>
+        <p>Obrigatório: username, password, grant_type</p>
+        <p>Exemplo: username=andre@my.ipleiria.pt&password=123&grant_type=password</p>
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo: {"access_token": [string],"token_type": "bearer", "expires_in": [number]}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 400</p>
+        <p>Conteúdo {"error": "Invalid Access", "error_description": "User credentials do no match"}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Criar conta</h1>
+        Cria uma conta que terá que ser posteriormente aceite pelo administrador do sistema para esta conta ser usada para autenticação.
+        <h3>URL</h3>
+        /api/user
+        <h3>Informação</h3>
+        Não necessita autenticação
+        <h3>Método</h3>
+        POST
+        <h3>Parâmetros URL</h3>
+        None
+        <h3>Parâmetros Body</h3>
+        <p>Content-Type: application/json</p>
+        <p>{"Email": [string], "Password": [string]}</p>
+        <p>Obrigatório: "Email", "Password"</p>
+        <p>Email: Deve ser do formato ?@my.ipleiria.pt</p>
+        <p>Password: Deve ter 3 ou mais caracteres</p>
+        <p>Exemplo: {"Email": "andre789@my.ipleiria.pt", "Password": "123"}</p>
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 201</p>
+        <p>Conteúdo: {"Message":"User Created"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 400</p>
+        <p>Conteúdo: { "Error": "User credentials format is incorrect, email must be ?@my.ipleiria.pt and password must have more than 2 caracters"}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Obter todos os sensores</h1>
+        Obtemos informação acerca de todos os sensores registados no sistema.
+        <h3>URL</h3>
+        /api/sensors
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        None
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo: [{"Id":1,"Floor":1,"Location":"Biblioteca","Latitude":"39.733296","Longitude":"-8.820811"},(…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensors not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Obter sensores por localização</h1>
+        Obtemos informação acerca de todos os sensores que se encontram numa certa localização.
+        <h3>URL</h3>
+        /api/sensors/{location}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        Obrigatório: location=[string]
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo: [{"Id":1,"Floor":1,"Location":"Biblioteca","Latitude":"39.733296","Longitude":"-8.820811"},(…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensors not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Obter sensores por localização e piso</h1>
+        Obtemos informação acerca de todos os sensores que se encontram numa certa localização.
+        <h3>URL</h3>
+        /api/sensors/{location}/{floor}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        <p>Obrigatório: location=[string], floor=[int]</p>
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo: [{"Id":1,"Floor":1,"Location":"Biblioteca","Latitude":"39.733296","Longitude":"-8.820811"},(…)]</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensors not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Obter a bateria atual de um sensor</h1>
+        Obtemos informação acerca de nível de bateria de um determinado sensor especificando este através do seu Id.
+        <h3>URL</h3>
+        /api/sensors/{id}/battery
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        <p>Obrigatório: id=[int]</p>
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo: {"Battery":85}</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: : { "Error": "No battery value found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+    <hr>
+    <div>
+        <h1>Registar um novo sensor</h1>
+        Permite-nos registar um novo sensor para o qual vamos posteriormente poder enviar dados.
+        <h3>URL</h3>
+        /api/sensors
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        POST
+        <h3>Parâmetros URL</h3>
+        None
+        <h3>Parâmetros Body</h3>
+        <p>Content-Type: application/json</p>
+        <p>{"Id": [number], "Floor": [number], "Location": [string], "Latitude": [string], "Longitude": [string]}</p>
+        <p>Obrigatório: "Id", "Floor", "Location"</p>
+        <p>Opcional: "Latitude", "Longitude"</p>
+
+        <p>Exemplo: {"Id": 13, "Floor": 1, "Location": "Biblioteca", "Latitude": "39.733296", "Longitude": "-8.820811"}</p>
+
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 201</p>
+        <p>Conteúdo: {"Message":"Sensor created"}</p>
+
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: { "Error": "Sensor with id 13 already exists"}</p>
+        <p>OU</p>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+
+    </div>
+    <hr>
+    <div>
+        <h1>Obter todos os alarmes</h1>
+        Obtemos informação acerca de todos os alarmes registados no sistema.
+        <h3>URL</h3>
+        /api/alarms
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        None
+        <h3>Parâmetros Body</h3>
+        None
+
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo:[{"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00", "Reason":"Reason","Floor":1,"Location":"EdificioA"},(…)]</p>
+        <p>OU</p>
+        <p> Código: 204</p>
+        <p>Conteúdo: { "Error": "Alarms not found"}</p>
+
+
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+
+    </div>
+
+    <hr>
+    <div>
+        <h1>Obter alarmes por Id do sensor</h1>
+        Obtemos informação acerca de todos os alarmes dispulatados relativamente aos dados de um certo sensor.
+        <h3>URL</h3>
+        /api/alarms/{sensorId}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        Obrigatório: sensorId=[int]
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo: [{"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00", "Reason":"Reason","Floor":1,"Location":"EdificioA"},(…)]</p>
+        <p>OU</p>
+        <p> Código: 204</p>
+        <p> Conteúdo: { "Error": "Alarms not found"}</p>
+
+
+
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+
+    </div>
+    <hr>
+
+    <div>
+        <h1>Obter alarmes por localização</h1>
+        Obtemos informação acerca de todos os alarmes dispulatados numa certa localização.
+        <h3>URL</h3>
+        /api/alarms/{location}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        Obrigatório: location=[string]
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p> Código: 200</p>
+        <p>Conteúdo:[{"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00", "Reason":"Reason","Floor":1,"Location":"EdificioA"},(…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Alarms not found"}</p>
+
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+
+    </div>
+    <hr>
+
+    <div>
+        <h1>Obter alarmes por localização e piso</h1>
+        Obtemos informação acerca de todos os alarmes dispulatados numa certa localização num certo piso.
+        <h3>URL</h3>
+        /api/alarms/{location}/{floor}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        Obrigatório: location=[string] , floor=[int]
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p> Código: 200</p>
+        <p>Conteúdo: [{"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00", "Reason":"Reason","Floor":1,"Location":"EdificioA"},(…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Alarms not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+    <hr>
+
+    <div>
+        <h1>Obter dados de todos os sensores</h1>
+        Obtemos informação acerca de todos os valores lidos por todos os sensores.
+        <h3>URL</h3>
+        /api/sensordata
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        None
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p> Código: 200</p>
+        <p>Conteúdo: [{"Id":5,"SensorId":3,"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00"},(…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensor data not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Obter dados de sensor por id</h1>
+        Obtemos informação acerca de todos os valores lidos por um certo sensor.
+        <h3>URL</h3>
+        /api/sensordata/{sensorId}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        Obrigatório: sensorId=[int]
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p> Código: 200</p>
+        <p>Conteúdo: [{"Id":5,"SensorId":3,"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00"}, (…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensor data not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+
+    <hr>
+    <div>
+        <h1>Obter dados de sensores por localização</h1>
+        Obtemos informação acerca de todos os valores lidos por todos os sensores numa certa localização.
+        <h3>URL</h3>
+        /api/sensordata/{location}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        Obrigatório: location=[string]
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p> Código: 200</p>
+        <p>Conteúdo: [{"Id":5,"SensorId":3,"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00"}, (…)]v</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensor data not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Obter dados de sensores por localização e piso</h1>
+        Obtemos informação acerca de todos os valores lidos por todos os sensores numa certa localização num certo piso.
+        <h3>URL</h3>
+        /api/sensordata/{location}/{floor}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        Obrigatório: location=[string], floor=[int]
+        <h3>Parvâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p> Código: 200</p>
+        <p>Conteúdo: [{"Id":5,"SensorId":3,"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00"}, (…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensor data not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Obter dados de sensores por localização piso e intervalo</h1>
+        Obtemos informação acerca de todos os valores lidos por todos os sensores numa certa localização num certo piso e num intervalo.
+        <h3>URL</h3>
+        /api/sensordata/{location}/{floor}/{startTimestamp}/{endTimestamp}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        GET
+        <h3>Parâmetros URL</h3>
+        <p>Obrigatório: location=[string], floor=[int], startTimestamp=[string], endTimestamp=[string]</p>
+        <p>startTimestamp: Deve ser do formato 2019-09-30T00:09:00</p>
+        <p>endTimestamp: Deve ser do formato 2019-12-01T00:09:00</p>
+        <h3>Parâmetros Body</h3>
+        None
+        <h3>Resposta de Sucesso</h3>
+        <p> Código: 200</p>
+        <p>Conteúdo: [{"Id":5,"SensorId":3,"Temperature":10.5,"Humidity":40.5,"TimeStamp":"2019-12-12T00:00:00"}, (…)]</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "Sensor data not found"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+        <p>OU</p>
+        <p>Código: 400</p>
+        <p>Conteúdo: { "Error": "EndTimestamp must be greater or equal than StartTimestamp"}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Adicionar dados a um sensor</h1>
+        Adiciona dados a um sensor pessoal, a localização e piso atual do dispositivo deve corresponder à localização do sensor para garantir que os dados a serem enviados são relativos ao lugar onde o sensor se encontra.
+        <h3>URL</h3>
+        /api/sensordata
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        POST
+        <h3>Parâmetros URL</h3>
+        None
+        <h3>Parâmetros Body</h3>
+        <p>Content-Type: application/json</p>
+        <p>{"SensorId":[int], "Temperature":[double], "Humidity":[double], "CurrentLocation":[string], "CurrentFloor":[int]}</p>
+        <p>Obrigatório: "SensorId", "Temperature", "Humidity", "CurrentLocation", "CurrentFloor"</p>
+        <p>Exemplo: {"SensorId":1, "Temperature":12, "Humidity":55, "CurrentLocation":"Biblioteca","CurrentFloor":1}</p>
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 201</p>
+        <p>Conteúdo: {"Message":"Sensor data created"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+        <p>OU</p>
+        <p>Código: 400</p>
+        <p>Conteúdo: { "Error": "User location and sensor location do no match"}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Invalidar dados a um sensor num intervalo</h1>
+        Invalida os dados de um sensor num certo intervalo (entre o StartTimestamp e EndTimestamp), usado quando um sensor se estraga e começa a enviar dados incorretos.
+        <h3>URL</h3>
+        /api/sensordata/{sensorId}
+        <h3>Informação</h3>
+        <p>Necessita de autenticação, precisamos de passar um Bearer token no header Authorization</p>
+        <p>Exemplo: Authorization: Bearer [token]</p>
+        <h3>Método</h3>
+        PUT
+        <h3>Parâmetros URL</h3>
+        Obrigatório: sensorId=[int]
+        <h3>Parâmetros Body</h3>
+        <p>Content-Type: application/json</p>
+        <p>{"StartTimestamp": [string],"EndTimestamp": [string]}</p>
+        <p>Obrigatório: "StartTimestamp", "EndTimestamp"</p>
+        <p>StartTimestamp: Deve ser do formato 2019-12-12T13:00:00</p>
+        <p>EndTimestamp: Deve ser do formato 2019-12-12T17:30:00</p>
+        <p>Exemplo: {"StartTimestamp": "2019-12-12T13:00:00","EndTimestamp": "2019-12-12T17:30:00"}</p>
+        <h3>Resposta de Sucesso</h3>
+        <p>Código: 200</p>
+        <p>Conteúdo: {"Message":"Success"}</p>
+        <p>OU</p>
+        <p>Código: 204</p>
+        <p>Conteúdo: { "Error": "0 dados invalidados"}</p>
+        <h3>Resposta de Erro</h3>
+        <p>Código: 401</p>
+        <p>Conteúdo: {"Message":"Authorization has been denied for this request."}</p>
+        <p>OU</p>
+        <p>Código: 400</p>
+        <p>Conteúdo: { "Error": "EndTimestamp must be greater or equal than StartTimestamp"}</p>
+    </div>
+
+</body>
+</html>

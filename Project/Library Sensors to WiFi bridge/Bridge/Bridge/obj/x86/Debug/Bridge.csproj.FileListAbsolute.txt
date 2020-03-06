@@ -1,0 +1,16 @@
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/bin/Debug/Bridge.exe
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/bin/Debug/Bridge.pdb
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/bin/Debug/M2Mqtt.Net.dll
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/bin/Debug/M2Mqtt.Net.pdb
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/obj/x86/Debug/Bridge.csprojAssemblyReference.cache
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/obj/x86/Debug/Bridge.csproj.CopyComplete
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/obj/x86/Debug/Bridge.exe
+/home/user/Desktop/ola/Bridge/Bridge/Bridge/obj/x86/Debug/Bridge.pdb
+/home/user/Desktop/Bridge/Bridge/bin/Debug/Bridge.exe
+/home/user/Desktop/Bridge/Bridge/bin/Debug/Bridge.pdb
+/home/user/Desktop/Bridge/Bridge/bin/Debug/M2Mqtt.Net.dll
+/home/user/Desktop/Bridge/Bridge/bin/Debug/M2Mqtt.Net.pdb
+/home/user/Desktop/Bridge/Bridge/obj/x86/Debug/Bridge.csprojAssemblyReference.cache
+/home/user/Desktop/Bridge/Bridge/obj/x86/Debug/Bridge.csproj.CopyComplete
+/home/user/Desktop/Bridge/Bridge/obj/x86/Debug/Bridge.exe
+/home/user/Desktop/Bridge/Bridge/obj/x86/Debug/Bridge.pdb
